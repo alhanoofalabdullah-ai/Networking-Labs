@@ -1,0 +1,85 @@
+# =========================
+
+# Switch Configuration
+
+# =========================
+
+enable
+configure terminal
+
+vlan 10
+name SALES
+
+vlan 20
+name HR
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+
+interface fa0/3
+switchport mode access
+switchport access vlan 20
+
+interface fa0/4
+switchport mode access
+switchport access vlan 20
+
+interface fa0/24
+switchport mode trunk
+
+end
+write memory
+
+# =========================
+
+# Router Configuration
+
+# =========================
+
+enable
+configure terminal
+
+interface g0/0/0
+no shutdown
+
+interface g0/0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+
+interface g0/0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+
+end
+write memory
+
+# =========================
+
+# PC IP Addressing
+
+# =========================
+
+PC0
+IP Address: 192.168.10.2
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+
+PC1
+IP Address: 192.168.10.3
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.10.1
+
+PC2
+IP Address: 192.168.20.2
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.20.1
+
+PC3
+IP Address: 192.168.20.3
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.20.1
