@@ -1,53 +1,51 @@
 # 🌐 Networking Labs Portfolio
-Hands-on networking labs built using Cisco Packet Tracer, covering switching, routing, VLANs, and data center fundamentals.
-Collection of networking labs and projects using Cisco Packet Tracer. Includes VLANs, Routing, Switching, and Data Center concepts. Each project contains topology diagrams, configurations, and testing results.
-# 🌐 Networking Labs Portfolio
 
-This repository contains my hands-on networking labs built using Cisco Packet Tracer.
+Hands-on networking labs built using Cisco Packet Tracer, covering switching, routing, VLANs, and network services.
 
-## 👩‍💻 About Me
-Aspiring Network & Cloud Engineer with a background in digital systems and software development (Python, SQL).
-Currently building practical networking skills through real lab projects.
+---
 
-## 🧪 Labs Included
+## 📂 Projects
 
-### 🔹 Project 01 - Basic Network
-- Built a simple network using 2 PCs and 1 switch
-- Configured IP addressing
-- Tested connectivity using ping
+### 🔹 Project-01: Basic Network
 
-📁 File: project-01-basic-network.pkt
+* Simple network topology
+* Basic connectivity testing using ping
 
-## 🔹 Project 02 - VLAN
+---
 
-- Built a network with 4 PCs and 1 switch
-- Created VLAN 10 (SALES) and VLAN 20 (HR)
-- Assigned ports to VLANs
-- Configured IP addressing
+### 🔹 Project-02: VLAN Configuration
 
-### 🧪 Test Results
-- PC0 → PC1 ✅ Success
-- PC0 → PC2 ❌ Failed (VLAN isolation)
+* Created VLANs (VLAN 10, VLAN 20)
+* Assigned ports to VLANs
+* Verified communication within same VLAN
+* Observed isolation between VLANs
 
-### 📁 Files
-- project-02-vlan.pkt
+---
+
+### 🔹 Project-03: Router-on-a-Stick (Inter-VLAN Routing)
+
+* Configured trunk between switch and router
+* Created router subinterfaces
+* Enabled communication between VLANs
+* Verified connectivity using ping
 
 ---
 
 ## 🚀 Upcoming Projects
-- VLAN Configuration
-- Inter-VLAN Routing
-- Static Routing
-- DHCP Server Setup
-- Network Security Basics
+
+* Project-04: DHCP Server Network
+* Project-05: ACL (Access Control List)
+* Project-06: NAT Configuration
 
 ---
 
 ## 🛠️ Tools Used
-- Cisco Packet Tracer
-- GitHub for version control
+
+* Cisco Packet Tracer
 
 ---
 
-## 📌 Goal
-To become a professional Network / Data Center Engineer and build a strong technical portfolio.
+## 👩‍💻 Author
+
+Alhanoof Alabdullah
+Aspiring Network & Cloud Engineer 🚀
