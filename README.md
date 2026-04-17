@@ -1,4 +1,5 @@
-# Networking-Labs
+# 🌐 Networking Labs Portfolio
+Hands-on networking labs built using Cisco Packet Tracer, covering switching, routing, VLANs, and data center fundamentals.
 Collection of networking labs and projects using Cisco Packet Tracer. Includes VLANs, Routing, Switching, and Data Center concepts. Each project contains topology diagrams, configurations, and testing results.
 # 🌐 Networking Labs Portfolio
 
