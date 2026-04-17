@@ -18,6 +18,20 @@ Currently building practical networking skills through real lab projects.
 
 📁 File: project-01-basic-network.pkt
 
+## 🔹 Project 02 - VLAN
+
+- Built a network with 4 PCs and 1 switch
+- Created VLAN 10 (SALES) and VLAN 20 (HR)
+- Assigned ports to VLANs
+- Configured IP addressing
+
+### 🧪 Test Results
+- PC0 → PC1 ✅ Success
+- PC0 → PC2 ❌ Failed (VLAN isolation)
+
+### 📁 Files
+- project-02-vlan.pkt
+
 ---
 
 ## 🚀 Upcoming Projects
