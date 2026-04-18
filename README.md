@@ -22,12 +22,21 @@ Hands-on networking labs built using Cisco Packet Tracer, demonstrating practica
 
 ---
 
-### 🔹 Project-03: Router-on-a-Stick (Inter-VLAN Routing)
+### 🔹 Project-03: Inter-VLAN Routing (Router-on-a-Stick)
 
-* Configured trunk link between switch and router
+* Configured trunk between switch and router
 * Implemented router subinterfaces using 802.1Q
 * Enabled communication between VLANs
-* Verified connectivity across networks
+* Verified connectivity across VLANs
+
+---
+
+### 🔹 Project-04: DHCP Server Network
+
+* Configured router as DHCP server
+* Created DHCP pools for multiple VLANs
+* Enabled dynamic IP assignment
+* Verified automatic IP allocation and connectivity
 
 ---
 
@@ -35,21 +44,22 @@ Hands-on networking labs built using Cisco Packet Tracer, demonstrating practica
 
 * VLAN segmentation
 * Inter-VLAN routing
+* DHCP configuration
 * Trunk configuration (802.1Q)
-* Basic network troubleshooting
 * IP addressing & subnetting
+* Network troubleshooting
 
 ---
 
 ## 🚀 Upcoming Projects
 
-* 🔸 Project-04: DHCP Server Configuration
 * 🔸 Project-05: Access Control Lists (ACL)
 * 🔸 Project-06: NAT Configuration
+* 🔸 Project-07: Port Security
 
 ---
 
-## 🛠️ Tools
+## 🛠️ Tools Used
 
 * Cisco Packet Tracer
 
