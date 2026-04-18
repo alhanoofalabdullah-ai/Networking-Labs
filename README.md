@@ -40,6 +40,14 @@ Hands-on networking labs built using Cisco Packet Tracer, demonstrating practica
 
 ---
 
+### 🔹 Project-06: NAT Configuration
+- Configure NAT (PAT - Overload)
+- Enable internal network to access external network
+- Define inside and outside interfaces
+- Test connectivity using ping between private and public networks
+
+---
+
 ## 🧠 Skills Demonstrated
 
 * VLAN segmentation
