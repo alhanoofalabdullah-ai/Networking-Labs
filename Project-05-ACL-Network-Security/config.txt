@@ -1,0 +1,29 @@
+! =========================
+! Router Configuration
+! =========================
+
+enable
+conf t
+
+! Subinterfaces for VLANs
+interface g0/0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+
+interface g0/0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+
+! =========================
+! ACL Configuration
+! =========================
+
+access-list 100 deny ip 192.168.20.0 0.0.0.255 192.168.10.0 0.0.0.255
+access-list 100 permit ip any any
+
+! Apply ACL inbound on VLAN 20
+interface g0/0/0.20
+ ip access-group 100 in
+
+end
+write memory
