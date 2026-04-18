@@ -1,6 +1,6 @@
 # 🌐 Networking Labs Portfolio
 
-Hands-on networking labs built using Cisco Packet Tracer, covering switching, routing, VLANs, and network services.
+Hands-on networking labs built using Cisco Packet Tracer, demonstrating practical skills in switching, routing, VLANs, and network services.
 
 ---
 
@@ -8,38 +8,48 @@ Hands-on networking labs built using Cisco Packet Tracer, covering switching, ro
 
 ### 🔹 Project-01: Basic Network
 
-* Simple network topology
-* Basic connectivity testing using ping
+* Built a simple LAN topology
+* Verified connectivity using ping
 
 ---
 
 ### 🔹 Project-02: VLAN Configuration
 
-* Created VLANs (VLAN 10, VLAN 20)
-* Assigned ports to VLANs
-* Verified communication within same VLAN
-* Observed isolation between VLANs
+* Created VLAN 10 (SALES) and VLAN 20 (HR)
+* Assigned switch ports to VLANs
+* Tested intra-VLAN communication
+* Observed inter-VLAN isolation
 
 ---
 
 ### 🔹 Project-03: Router-on-a-Stick (Inter-VLAN Routing)
 
-* Configured trunk between switch and router
-* Created router subinterfaces
+* Configured trunk link between switch and router
+* Implemented router subinterfaces using 802.1Q
 * Enabled communication between VLANs
-* Verified connectivity using ping
+* Verified connectivity across networks
+
+---
+
+## 🧠 Skills Demonstrated
+
+* VLAN segmentation
+* Inter-VLAN routing
+* Trunk configuration (802.1Q)
+* Basic network troubleshooting
+* IP addressing & subnetting
 
 ---
 
 ## 🚀 Upcoming Projects
 
-* Project-04: DHCP Server Network
-* Project-05: ACL (Access Control List)
-* Project-06: NAT Configuration
+* 🔸 Project-04: DHCP Server Configuration
+* 🔸 Project-05: Access Control Lists (ACL)
+* 🔸 Project-06: NAT Configuration
 
 ---
 
-## 🛠️ Tools Used
+## 🛠️ Tools
 
 * Cisco Packet Tracer
 
@@ -48,4 +58,4 @@ Hands-on networking labs built using Cisco Packet Tracer, covering switching, ro
 ## 👩‍💻 Author
 
 Alhanoof Alabdullah
-Aspiring Network & Cloud Engineer 🚀
+Network & Cloud Engineer (In Progress 🚀)
