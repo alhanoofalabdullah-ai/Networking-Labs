@@ -1,0 +1,113 @@
+===============================
+Project 10
+Dynamic DHCP + VLAN + NAT Overload
+===============================
+
+##########
+# SWITCH #
+##########
+
+enable
+conf t
+
+vlan 10
+name SALES
+vlan 20
+name HR
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+
+interface fa0/3
+switchport mode access
+switchport access vlan 10
+
+interface fa0/4
+switchport mode access
+switchport access vlan 20
+
+interface fa0/6
+switchport mode access
+switchport access vlan 20
+
+interface fa0/7
+switchport mode access
+switchport access vlan 20
+
+interface fa0/8
+switchport mode access
+switchport access vlan 20
+
+interface fa0/24
+switchport mode trunk
+
+end
+wr
+
+################
+# ROUTER SETUP #
+################
+
+enable
+conf t
+
+interface g0/0/0
+no ip address
+no shutdown
+
+interface g0/0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+ip nat inside
+
+interface g0/0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+ip nat inside
+
+interface g0/0/1
+ip address 200.1.1.1 255.255.255.0
+ip nat outside
+no shutdown
+
+############
+# DHCP POOL #
+############
+
+ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp excluded-address 192.168.20.1 192.168.20.10
+
+ip dhcp pool VLAN10
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 8.8.8.8
+
+ip dhcp pool VLAN20
+network 192.168.20.0 255.255.255.0
+default-router 192.168.20.1
+dns-server 8.8.8.8
+
+########
+# NAT  #
+########
+
+access-list 1 permit 192.168.10.0 0.0.0.255
+access-list 1 permit 192.168.20.0 0.0.0.255
+ip nat inside source list 1 interface g0/0/1 overload
+
+end
+wr
+
+################
+# VERIFICATION #
+################
+
+show vlan brief
+show interfaces trunk
+show ip interface brief
+show ip nat translations
