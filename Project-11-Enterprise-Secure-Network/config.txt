@@ -1,0 +1,118 @@
+===============================
+Project 11 — Enterprise Secure Network
+Cisco Packet Tracer Configuration
+===============================
+
+Network Components:
+- 1 Switch (2960)
+- 2 Routers (PT8200 + 1941)
+- 5 PCs
+- 1 Server
+- Inter-Router Connection
+- Secure Internal Network
+
+====================================
+Router0 Configuration
+====================================
+
+enable
+configure terminal
+
+hostname Router0
+
+interface g0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+
+interface g0/0/1
+ip address 200.1.1.1 255.255.255.252
+no shutdown
+
+ip route 0.0.0.0 0.0.0.0 200.1.1.2
+
+access-list 1 permit 192.168.10.0 0.0.0.255
+
+interface g0/0
+ip nat inside
+exit
+
+interface g0/0/1
+ip nat outside
+exit
+
+ip nat inside source list 1 interface g0/0/1 overload
+
+end
+write memory
+
+====================================
+Router1 Configuration
+====================================
+
+enable
+configure terminal
+
+hostname Router1
+
+interface g0/0
+ip address 200.1.1.2 255.255.255.252
+no shutdown
+
+ip route 192.168.10.0 255.255.255.0 200.1.1.1
+
+ip route 0.0.0.0 0.0.0.0 200.1.1.1
+
+end
+write memory
+
+====================================
+PC IP Addressing
+====================================
+
+PC0 → 192.168.10.10
+PC1 → 192.168.10.11
+PC2 → 192.168.10.12
+PC3 → 192.168.10.13
+PC4 → 192.168.10.14
+
+Subnet Mask:
+255.255.255.0
+
+Default Gateway:
+192.168.10.1
+
+====================================
+Server Configuration
+====================================
+
+Server IP:
+192.168.10.100
+
+Subnet Mask:
+255.255.255.0
+
+Gateway:
+192.168.10.1
+
+====================================
+Security Features
+====================================
+
+- NAT Overload
+- Secure Routing
+- Controlled Internal Access
+- Enterprise Structured Design
+- Server Isolation
+- Scalable Secure Architecture
+
+====================================
+Verification Commands
+====================================
+
+show ip interface brief
+show running-config
+show ip route
+show access-lists
+show ip nat translations
+ping 200.1.1.2
+ping 8.8.8.8
