@@ -1,141 +1,196 @@
-# 🌐 Networking Labs – Cisco Packet Tracer Projects
+# Networking Labs 🚀
 
-## 🚀 Overview
-This repository contains a structured collection of hands-on networking labs built using **Cisco Packet Tracer**. The labs are designed to demonstrate real-world networking concepts, ranging from basic connectivity to advanced enterprise-level configurations.
+A professional hands-on networking lab portfolio built using Cisco Packet Tracer, focused on VLANs, Routing, DHCP, NAT, ACLs, and Enterprise Network Security.
 
-Each project focuses on a specific networking concept, providing:
-- Practical configuration examples
-- Step-by-step implementation
-- Verification and troubleshooting commands
-- Real-world network scenarios
-
----
-
-## 🎯 Objective
-The goal of this repository is to:
-- Strengthen practical networking skills
-- Build a professional portfolio for networking roles
-- Demonstrate hands-on experience in Cisco technologies
-- Prepare for certifications like **CCNA**
-
----
-
-## 🧠 Skills Covered
-- VLAN Configuration
-- Inter-VLAN Routing (Router-on-a-Stick)
-- DHCP Configuration
-- Access Control Lists (ACL)
-- NAT (Static, Dynamic, PAT)
-- Port Forwarding
-- Network Security Basics
-- Layer 2 & Layer 3 Integration
-- Troubleshooting & Verification
-
----
-
-## 📂 Projects
-
-### 🔹 Project 01 – Basic Network
-- Simple network connectivity
-- IP addressing and communication testing
-
----
-
-### 🔹 Project 02 – VLAN Configuration
-- VLAN creation and segmentation
-- Access port configuration
-
----
-
-### 🔹 Project 03 – Inter-VLAN Routing
-- Router-on-a-Stick implementation
-- Communication between VLANs
-
----
-
-### 🔹 Project 04 – DHCP Configuration
-- Automatic IP assignment
-- DHCP pools and exclusions
-
----
-
-### 🔹 Project 05 – ACL Network Security
-- Standard and extended ACLs
-- Traffic filtering and access control
-
----
-
-### 🔹 Project 06 – NAT Configuration
-- Static NAT
-- Internal to external translation
-
----
-
-### 🔹 Project 07 – NAT Static Port Forwarding
-- Port forwarding configuration
-- External access to internal services
-
----
-
-### 🔹 Project 08 – VLAN + Routing Integration
-- Advanced VLAN design
-- Layer 2 and Layer 3 integration
-
----
-
-### 🔥 Project 09 – VLAN Routing with NAT Overload
-- VLAN segmentation (VLAN 10 & VLAN 20)
-- Inter-VLAN Routing using Router-on-a-Stick
-- NAT Overload (PAT) for internet access
-- Trunk and access port configuration
-- Full network verification using:
-  - `ping`
-  - `show ip nat translations`
-  - `show interfaces trunk`
-
----
-
-## 🧪 Verification Approach
-Each project includes validation steps such as:
-- Connectivity testing using `ping`
-- Interface checks using `show ip interface brief`
-- VLAN verification using `show vlan brief`
-- NAT validation using `show ip nat translations`
-
----
-
-## 🛠️ Tools Used
-- Cisco Packet Tracer
-- CLI (Command Line Interface)
-- Networking simulation environments
-
----
-
-## 📌 Key Highlights
-- Hands-on lab-based learning
-- Realistic enterprise network scenarios
-- Clean and structured configurations
-- Ready for GitHub portfolio and CV
-
----
-
-## 🏁 Conclusion
-This repository represents a progressive journey through networking concepts, starting from fundamentals and advancing toward real-world implementations.
-
-It reflects strong practical skills in:
-- Network design
-- Configuration
-- Troubleshooting
-- Verification
-
----
-
-## 🔥 Tagline
-**Design. Segment. Route. Secure. Connect.**
+This repository demonstrates practical implementation of real-world network engineering concepts used in enterprise environments.
 
 ---
 
 ## 👩‍💻 Author
-**Alhanoof Alabdullah**
-- Networking & Digital Transformation Enthusiast
-- Focused on Enterprise Systems & Infrastructure
+
+**Alhanoof Alabdullah**  
+Senior Digital Transformation & Enterprise Systems Specialist  
+PMIS | Network Systems | Cybersecurity | Enterprise Technology
+
+GitHub: github.com/alhanoofalabdullah-ai
+
+---
+
+# 📂 Projects Included
+
+## Project 01 — Basic Network
+- Basic switch and PC connectivity
+- IP addressing
+- Connectivity verification using ping
+- Initial network setup fundamentals
+
+---
+
+## Project 02 — VLAN Configuration
+- VLAN creation
+- Port assignment
+- Department segmentation
+- VLAN verification
+
+---
+
+## Project 03 — VLAN Routing (Router-on-a-Stick)
+- Inter-VLAN routing
+- Subinterfaces configuration
+- Trunk configuration
+- Router-on-a-Stick implementation
+
+---
+
+## Project 04 — DHCP Router-on-a-Stick
+- DHCP pool creation
+- Dynamic IP assignment
+- Multi-VLAN DHCP deployment
+- Gateway and DNS configuration
+
+---
+
+## Project 05 — ACL Network Security
+- Standard ACL
+- Extended ACL
+- Access control between departments
+- Traffic filtering policies
+
+---
+
+## Project 06 — NAT Configuration
+- Static NAT
+- Dynamic NAT
+- Internal to external communication
+- Public/Private IP translation
+
+---
+
+## Project 07 — Static NAT + Port Forwarding + Web Server
+- Web server deployment
+- Static NAT
+- Port forwarding
+- External access simulation
+
+---
+
+## Project 08 — Dynamic NAT + PAT (Overload)
+- NAT Overload
+- PAT implementation
+- Shared public IP design
+- Enterprise internet access model
+
+---
+
+## Project 09 — VLAN + Routing + NAT Overload
+- Full segmented enterprise design
+- Inter-VLAN communication
+- NAT overload
+- Internet access control
+
+---
+
+## Project 10 — Dynamic DHCP + VLAN + NAT Overload
+- Full enterprise automation
+- DHCP + VLAN + NAT integration
+- Scalable infrastructure design
+
+---
+
+## Project 11 — Enterprise Secure Network
+- Advanced segmentation
+- Security hardening
+- Controlled routing
+- Enterprise secure architecture
+
+---
+
+## Project 12 — Advanced VLAN + InterVLAN + ACL
+- Advanced VLAN design
+- InterVLAN routing
+- ACL enforcement
+- Department-level access control
+- Secure enterprise policy implementation
+
+---
+
+# 🛠 Technologies Used
+
+- Cisco Packet Tracer
+- VLAN
+- Inter-VLAN Routing
+- Router-on-a-Stick
+- DHCP
+- NAT
+- PAT
+- ACL
+- Port Forwarding
+- Enterprise Network Security
+- Switching & Routing
+- Network Troubleshooting
+
+---
+
+# 🎯 Learning Goals
+
+This repository was built to strengthen:
+
+- Real-world network engineering skills
+- Enterprise infrastructure design
+- Security policy implementation
+- Troubleshooting methodology
+- Practical CCNA / Network Security concepts
+- Professional GitHub technical portfolio building
+
+---
+
+# 📌 Future Projects
+
+Upcoming advanced labs:
+
+- OSPF
+- EIGRP
+- BGP Basics
+- STP Advanced Labs
+- HSRP / Redundancy
+- VPN Labs
+- Firewall Design
+- IDS / IPS Simulation
+- Cloud Network Hybrid Labs
+
+---
+
+# ⭐ Purpose
+
+This portfolio is designed for:
+
+- Professional GitHub presence
+- Technical interview demonstrations
+- Career growth in Network Engineering
+- Cybersecurity career transition
+- Enterprise Systems architecture exposure
+
+---
+
+# 📬 Contact
+
+For professional collaboration, consulting, or opportunities:
+
+LinkedIn: (Your LinkedIn Here)
+
+GitHub: github.com/alhanoofalabdullah-ai
+
+---
+
+# 🔥 Final Note
+
+Networking is not only configuration.
+
+It is architecture.  
+It is security.  
+It is business continuity.  
+It is trust.
+
+This repository reflects that mindset.
+
+---
