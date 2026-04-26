@@ -1,1 +1,110 @@
+Project 16 - EIGRP Multi Router Dynamic Routing
+Author: Alhanoof Alabdullah
 
+========================================
+Router0 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router0
+
+interface GigabitEthernet0/0/1
+ description Link-to-Router2
+ ip address 70.70.70.1 255.255.255.252
+ no shutdown
+
+router eigrp 100
+ no auto-summary
+ network 70.70.70.0 0.0.0.3
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip eigrp neighbors
+show ip route
+
+
+========================================
+Router1 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router1
+
+interface GigabitEthernet0/1
+ description Link-to-Router2
+ ip address 80.80.80.1 255.255.255.252
+ no shutdown
+
+router eigrp 100
+ no auto-summary
+ network 80.80.80.0 0.0.0.3
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip eigrp neighbors
+show ip route
+
+
+========================================
+Router2 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router2
+
+interface GigabitEthernet0/0
+ description Link-to-Router1
+ ip address 80.80.80.2 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/1
+ description Link-to-Router0
+ ip address 70.70.70.2 255.255.255.252
+ no shutdown
+
+router eigrp 100
+ no auto-summary
+ network 80.80.80.0 0.0.0.3
+ network 70.70.70.0 0.0.0.3
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip eigrp neighbors
+show ip route
+
+
+========================================
+Expected EIGRP Result
+========================================
+
+Router0 should form EIGRP neighbor with Router2.
+Router1 should form EIGRP neighbor with Router2.
+Router2 should show two EIGRP neighbors.
+
+Expected result:
+Neighbor adjacency established successfully
+
+========================================
+Useful Commands
+========================================
+
+show ip interface brief
+show ip route
+show ip eigrp neighbors
+show running-config | section eigrp
+write memory
