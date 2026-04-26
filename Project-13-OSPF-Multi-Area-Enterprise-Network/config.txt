@@ -1,0 +1,85 @@
+```txt
+==============================
+Project 13 - Configuration File
+OSPF Multi-Area Enterprise Network
+==============================
+
+========== Router0 ==========
+
+enable
+conf t
+
+interface GigabitEthernet0/0/1
+ip address 10.10.10.1 255.255.255.252
+no shutdown
+exit
+
+interface GigabitEthernet0/0/0
+ip address 20.20.20.1 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.10.10.0 0.0.0.3 area 0
+network 20.20.20.0 0.0.0.3 area 0
+network 192.168.10.0 0.0.0.255 area 0
+network 192.168.20.0 0.0.0.255 area 0
+network 192.168.30.0 0.0.0.255 area 0
+network 192.168.40.0 0.0.0.255 area 0
+network 192.168.50.0 0.0.0.255 area 0
+
+end
+wr
+
+
+========== Router1 ==========
+
+enable
+conf t
+
+interface GigabitEthernet0/0
+ip address 10.10.10.2 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 10.10.10.0 0.0.0.3 area 0
+
+end
+wr
+
+
+========== Router2 ==========
+
+enable
+conf t
+
+interface GigabitEthernet0/0
+ip address 20.20.20.2 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 20.20.20.0 0.0.0.3 area 0
+
+end
+wr
+
+
+========== Verification Commands ==========
+
+show ip ospf neighbor
+show ip route
+show ip interface brief
+ping 192.168.50.2
+
+========== Expected Result ==========
+
+Packets: Sent = 4
+Received = 4
+Lost = 0 (0% loss)
+
+OSPF adjacency established successfully
+Full connectivity achieved across all VLANs
+Enterprise network operational
+```
