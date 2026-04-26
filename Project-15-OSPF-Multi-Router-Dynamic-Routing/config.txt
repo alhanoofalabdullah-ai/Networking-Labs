@@ -1,1 +1,110 @@
+Project 15 - OSPF Multi-Router Dynamic Routing
+Author: Alhanoof Alabdullah
 
+========================================
+Router0 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router0
+
+interface GigabitEthernet0/0/1
+ description Link-to-Router2
+ ip address 70.70.70.1 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 1.1.1.1
+ network 70.70.70.0 0.0.0.3 area 0
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip ospf neighbor
+show ip route
+
+
+========================================
+Router1 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router1
+
+interface GigabitEthernet0/1
+ description Link-to-Router2
+ ip address 80.80.80.1 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 2.2.2.2
+ network 80.80.80.0 0.0.0.3 area 0
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip ospf neighbor
+show ip route
+
+
+========================================
+Router2 Configuration
+========================================
+
+enable
+configure terminal
+
+hostname Router2
+
+interface GigabitEthernet0/0
+ description Link-to-Router1
+ ip address 80.80.80.2 255.255.255.252
+ no shutdown
+
+interface GigabitEthernet0/1
+ description Link-to-Router0
+ ip address 70.70.70.2 255.255.255.252
+ no shutdown
+
+router ospf 1
+ router-id 3.3.3.3
+ network 80.80.80.0 0.0.0.3 area 0
+ network 70.70.70.0 0.0.0.3 area 0
+
+end
+write memory
+
+Verification:
+show ip interface brief
+show ip ospf neighbor
+show ip route
+
+
+========================================
+Expected OSPF Result
+========================================
+
+Router0 should form OSPF neighbor with Router2.
+Router1 should form OSPF neighbor with Router2.
+Router2 should show two OSPF neighbors.
+
+Expected neighbor state:
+FULL/DR or FULL/BDR
+
+========================================
+Useful Commands
+========================================
+
+show ip interface brief
+show ip route
+show ip ospf neighbor
+show running-config | section ospf
+write memory
