@@ -1,0 +1,92 @@
+
+---
+
+```txt
+# config.txt
+
+==============================
+PROJECT 17 CONFIGURATION
+OSPF + EIGRP REDISTRIBUTION
+==============================
+
+==============================
+ROUTER0 CONFIG
+==============================
+
+enable
+conf t
+
+interface g0/0/1
+ip address 90.90.90.1 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 90.90.90.0 0.0.0.3 area 0
+end
+
+wr
+
+==============================
+ROUTER1 CONFIG
+==============================
+
+enable
+conf t
+
+interface g0/0
+ip address 100.100.100.1 255.255.255.252
+no shutdown
+exit
+
+router eigrp 100
+no auto-summary
+network 100.100.100.0 0.0.0.3
+end
+
+wr
+
+==============================
+ROUTER2 CONFIG
+==============================
+
+enable
+conf t
+
+interface g0/1
+ip address 90.90.90.2 255.255.255.252
+no shutdown
+exit
+
+interface g0/0
+ip address 100.100.100.2 255.255.255.252
+no shutdown
+exit
+
+router ospf 1
+network 90.90.90.0 0.0.0.3 area 0
+redistribute eigrp 100 subnets
+exit
+
+router eigrp 100
+no auto-summary
+network 100.100.100.0 0.0.0.3
+redistribute ospf 1 metric 10000 100 255 1 1500
+end
+
+wr
+
+==============================
+VERIFICATION
+==============================
+
+show ip ospf neighbor
+show ip eigrp neighbors
+show ip route
+show ip interface brief
+
+==============================
+PROJECT STATUS
+==============================
+
+SUCCESSFULLY COMPLETED ✅
