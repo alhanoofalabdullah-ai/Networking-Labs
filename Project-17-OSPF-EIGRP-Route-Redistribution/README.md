@@ -128,7 +128,7 @@ Author
 
 Prepared by:
 
-Ahmed Alhanoof
+Alhanoof Alabdullah
 
 Senior Digital Transformation & Enterprise Systems Specialist
 
