@@ -1,196 +1,180 @@
 # Networking Labs 🚀
 
-A professional hands-on networking lab portfolio built using Cisco Packet Tracer, focused on VLANs, Routing, DHCP, NAT, ACLs, and Enterprise Network Security.
+A professional collection of Cisco Packet Tracer networking projects designed to demonstrate real-world enterprise networking skills, advanced routing, switching, security, and infrastructure solutions.
 
-This repository demonstrates practical implementation of real-world network engineering concepts used in enterprise environments.
+This repository showcases practical hands-on labs covering:
 
----
-
-## 👩‍💻 Author
-
-**Alhanoof Alabdullah**  
-Senior Digital Transformation & Enterprise Systems Specialist  
-PMIS | Network Systems | Cybersecurity | Enterprise Technology
-
-GitHub: github.com/alhanoofalabdullah-ai
-
----
-
-# 📂 Projects Included
-
-## Project 01 — Basic Network
-- Basic switch and PC connectivity
-- IP addressing
-- Connectivity verification using ping
-- Initial network setup fundamentals
-
----
-
-## Project 02 — VLAN Configuration
-- VLAN creation
-- Port assignment
-- Department segmentation
-- VLAN verification
-
----
-
-## Project 03 — VLAN Routing (Router-on-a-Stick)
-- Inter-VLAN routing
-- Subinterfaces configuration
-- Trunk configuration
-- Router-on-a-Stick implementation
-
----
-
-## Project 04 — DHCP Router-on-a-Stick
-- DHCP pool creation
-- Dynamic IP assignment
-- Multi-VLAN DHCP deployment
-- Gateway and DNS configuration
-
----
-
-## Project 05 — ACL Network Security
-- Standard ACL
-- Extended ACL
-- Access control between departments
-- Traffic filtering policies
-
----
-
-## Project 06 — NAT Configuration
-- Static NAT
-- Dynamic NAT
-- Internal to external communication
-- Public/Private IP translation
-
----
-
-## Project 07 — Static NAT + Port Forwarding + Web Server
-- Web server deployment
-- Static NAT
-- Port forwarding
-- External access simulation
-
----
-
-## Project 08 — Dynamic NAT + PAT (Overload)
-- NAT Overload
-- PAT implementation
-- Shared public IP design
-- Enterprise internet access model
-
----
-
-## Project 09 — VLAN + Routing + NAT Overload
-- Full segmented enterprise design
-- Inter-VLAN communication
-- NAT overload
-- Internet access control
-
----
-
-## Project 10 — Dynamic DHCP + VLAN + NAT Overload
-- Full enterprise automation
-- DHCP + VLAN + NAT integration
-- Scalable infrastructure design
-
----
-
-## Project 11 — Enterprise Secure Network
-- Advanced segmentation
-- Security hardening
-- Controlled routing
-- Enterprise secure architecture
-
----
-
-## Project 12 — Advanced VLAN + InterVLAN + ACL
-- Advanced VLAN design
-- InterVLAN routing
-- ACL enforcement
-- Department-level access control
-- Secure enterprise policy implementation
-
----
-
-# 🛠 Technologies Used
-
-- Cisco Packet Tracer
-- VLAN
+- VLAN Configuration
 - Inter-VLAN Routing
 - Router-on-a-Stick
-- DHCP
-- NAT
-- PAT
-- ACL
+- DHCP Configuration
+- ACL Security
+- NAT / PAT
+- Static NAT / Dynamic NAT
 - Port Forwarding
-- Enterprise Network Security
-- Switching & Routing
+- OSPF Routing
+- EIGRP Routing
+- Multi-Area OSPF
+- Route Redistribution
+- Enterprise Secure Networks
+- Advanced VLAN Design
+- Hybrid Routing Environments
+
+These projects are built to simulate production-grade enterprise network environments and demonstrate strong Cisco networking fundamentals for professional portfolios, interviews, and technical assessments.
+
+---
+
+# Repository Structure
+
+## Core Networking Projects
+
+### Project-01 — Basic Network
+Fundamental network topology creation using routers, switches, and end devices.
+
+### Project-02 — VLAN
+Basic VLAN segmentation and switch configuration.
+
+### Project-03 — VLAN Routing (Router-on-a-Stick)
+Inter-VLAN routing using subinterfaces and trunking.
+
+### Project-04 — DHCP Router-on-a-Stick
+Automatic IP assignment using DHCP with VLAN routing.
+
+### Project-05 — ACL Network Security
+Access Control Lists implementation for network traffic filtering and security.
+
+### Project-06 — NAT Configuration
+Basic Network Address Translation setup.
+
+### Project-07 — NAT Static + Port Forwarding + Web Server
+Static NAT, port forwarding, and internal web server publishing.
+
+### Project-08 — Dynamic NAT + PAT (Overload)
+Enterprise internet access using PAT and dynamic NAT.
+
+### Project-09 — VLAN Routing + NAT Overload
+Combined routing and internet access simulation.
+
+### Project-10 — Dynamic DHCP + VLAN + NAT Overload
+Full enterprise branch office simulation.
+
+---
+
+## Advanced Enterprise Projects
+
+### Project-11 — Enterprise Secure Network
+Advanced secure enterprise topology with segmentation and policy control.
+
+### Project-12 — Advanced VLAN + InterVLAN + ACL
+Enterprise switching design with advanced segmentation and access policies.
+
+### Project-13 — OSPF Multi-Area Enterprise Network
+Scalable OSPF design using multiple areas for large enterprise routing.
+
+### Project-14 — EIGRP Multi-Router Dynamic Routing
+Dynamic routing using EIGRP across multiple routers.
+
+### Project-15 — OSPF Multi-Router Dynamic Routing
+Full OSPF deployment across multiple routers.
+
+### Project-16 — EIGRP Multi-Router Dynamic Routing
+Advanced EIGRP implementation with enterprise-grade routing validation.
+
+### Project-17 — OSPF + EIGRP Route Redistribution
+Hybrid routing environment using OSPF and EIGRP with route redistribution.
+
+---
+
+# Technologies Used
+
+- Cisco Packet Tracer
+- Cisco IOS CLI
+- VLANs
+- Trunking
+- STP Concepts
+- DHCP
+- ACL
+- NAT / PAT
+- Static Routing
+- Dynamic Routing
+- OSPF
+- EIGRP
+- Route Redistribution
+- Enterprise Routing Design
 - Network Troubleshooting
 
 ---
 
-# 🎯 Learning Goals
+# Verification & Validation
 
-This repository was built to strengthen:
+Each project includes:
 
-- Real-world network engineering skills
-- Enterprise infrastructure design
-- Security policy implementation
-- Troubleshooting methodology
-- Practical CCNA / Network Security concepts
-- Professional GitHub technical portfolio building
+- Full topology implementation
+- Device configuration
+- Verification commands
+- Routing validation
+- Neighbor adjacency confirmation
+- Production-ready troubleshooting scenarios
 
----
+Common verification commands:
 
-# 📌 Future Projects
-
-Upcoming advanced labs:
-
-- OSPF
-- EIGRP
-- BGP Basics
-- STP Advanced Labs
-- HSRP / Redundancy
-- VPN Labs
-- Firewall Design
-- IDS / IPS Simulation
-- Cloud Network Hybrid Labs
+```bash
+show ip interface brief
+show running-config
+show vlan brief
+show ip route
+show ip ospf neighbor
+show ip eigrp neighbors
+show access-lists
+show ip nat translations
 
 ---
 
-# ⭐ Purpose
+## Professional Focus
 
-This portfolio is designed for:
+## This repository is built for:
 
-- Professional GitHub presence
-- Technical interview demonstrations
-- Career growth in Network Engineering
-- Cybersecurity career transition
-- Enterprise Systems architecture exposure
-
----
-
-# 📬 Contact
-
-For professional collaboration, consulting, or opportunities:
-
-LinkedIn: (Your LinkedIn Here)
-
-GitHub: github.com/alhanoofalabdullah-ai
+- GitHub Technical Portfolio
+- Senior Networking Roles
+- Infrastructure Engineering Positions
+- Enterprise Systems Roles
+- Technical Interviews
+- Cisco Lab Practice
+- Professional Demonstration of Hands-on Skills
 
 ---
 
-# 🔥 Final Note
+## Author
+Ahmed Alhanoof
 
-Networking is not only configuration.
+Senior Digital Transformation & Enterprise Systems Specialist
 
-It is architecture.  
-It is security.  
-It is business continuity.  
-It is trust.
+Specialized in:
 
-This repository reflects that mindset.
+PMIS Platforms
+Enterprise Systems
+Networking Infrastructure
+Digital Governance
+Construction Technology
+Infrastructure Delivery
+Cisco Networking Labs
+
+Focused on building enterprise-grade technical solutions across digital transformation and infrastructure environments.
 
 ---
+
+## Project Status
+
+Actively Expanding 🔥
+
+Production-Ready Labs ✅
+
+Enterprise Portfolio Ready 🚀
+
+Continuous Improvements Ongoing 📈
+
+---
+
+## GitHub Goal
+
+Building one of the strongest practical networking portfolios for enterprise infrastructure, digital transformation, and senior technology leadership opportunities.
