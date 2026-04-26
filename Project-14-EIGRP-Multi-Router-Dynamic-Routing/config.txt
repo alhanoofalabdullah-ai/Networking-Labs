@@ -1,0 +1,66 @@
+
+---
+
+```txt
+========================
+Router0 Configuration
+========================
+
+enable
+configure terminal
+
+interface g0/0/1
+ip address 60.60.60.1 255.255.255.252
+no shutdown
+exit
+
+router eigrp 100
+no auto-summary
+network 60.60.60.0 0.0.0.3
+end
+
+write memory
+
+========================
+Router1 Configuration
+========================
+
+enable
+configure terminal
+
+interface g0/1
+ip address 50.50.50.1 255.255.255.252
+no shutdown
+exit
+
+router eigrp 100
+no auto-summary
+network 50.50.50.0 0.0.0.3
+end
+
+write memory
+
+========================
+Router2 Configuration
+========================
+
+enable
+configure terminal
+
+interface g0/0
+ip address 50.50.50.2 255.255.255.252
+no shutdown
+exit
+
+interface g0/1
+ip address 60.60.60.2 255.255.255.252
+no shutdown
+exit
+
+router eigrp 100
+no auto-summary
+network 50.50.50.0 0.0.0.3
+network 60.60.60.0 0.0.0.3
+end
+
+write memory
