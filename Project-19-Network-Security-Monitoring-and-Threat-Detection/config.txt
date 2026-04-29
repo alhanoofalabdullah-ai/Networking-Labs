@@ -1,1 +1,158 @@
+==================================================
+PROJECT 19 — Network Security Monitoring and Threat Detection
+=============================================================
 
+Prepared by: Alhanoof Alabdullah
+
+==================================================
+SWITCH0 CONFIGURATION
+=====================
+
+enable
+configure terminal
+
+vlan 10
+name HR
+
+vlan 20
+name IT
+
+vlan 30
+name FINANCE
+
+vlan 40
+name ADMIN
+
+vlan 50
+name MANAGEMENT
+
+vlan 60
+name SECURITY
+
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+
+interface fa0/2
+switchport mode access
+switchport access vlan 20
+
+interface fa0/3
+switchport mode access
+switchport access vlan 30
+
+interface fa0/4
+switchport mode access
+switchport access vlan 40
+
+interface g0/1
+switchport mode trunk
+
+end
+write memory
+
+==================================================
+SERVER SWITCH CONFIGURATION
+===========================
+
+enable
+configure terminal
+
+vlan 60
+name SECURITY
+
+interface fa0/1
+switchport mode access
+switchport access vlan 60
+
+interface g0/1
+switchport mode trunk
+
+end
+write memory
+
+==================================================
+ROUTER3 CONFIGURATION
+=====================
+
+enable
+configure terminal
+
+interface g0/0
+no shutdown
+
+interface g0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+
+interface g0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+
+interface g0/0.30
+encapsulation dot1Q 30
+ip address 192.168.30.1 255.255.255.0
+
+interface g0/0.40
+encapsulation dot1Q 40
+ip address 192.168.40.1 255.255.255.0
+
+interface g0/0.50
+encapsulation dot1Q 50
+ip address 192.168.50.1 255.255.255.0
+
+interface g0/0.60
+encapsulation dot1Q 60
+ip address 192.168.60.1 255.255.255.0
+
+access-list 110 deny ip host 192.168.10.10 192.168.60.0 0.0.0.255
+access-list 110 permit ip any any
+
+interface g0/0.60
+ip access-group 110 in
+
+end
+write memory
+
+==================================================
+VERIFICATION COMMANDS
+=====================
+
+show access-lists
+
+show ip interface brief
+
+show running-config
+
+show vlan brief
+
+write memory
+
+==================================================
+PING TESTS
+==========
+
+FROM PC0
+
+ping 192.168.60.10
+
+EXPECTED RESULT:
+Destination host unreachable
+
+---
+
+ping 192.168.20.10
+
+EXPECTED RESULT:
+Reply from 192.168.20.10
+
+---
+
+ping 192.168.30.10
+
+EXPECTED RESULT:
+Reply from 192.168.30.10
+
+==================================================
+END OF CONFIGURATION
+====================
